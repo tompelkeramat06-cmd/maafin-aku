@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff6fa8">
+  <title>Maafin Aku Yuk? 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-hearts" id="bgHearts"></div>
+
+  <header class="topbar">
+    <button id="musicBtn" class="mini-btn">🔇 Musik</button>
+    <button id="themeBtn" class="mini-btn">🌙</button>
+  </header>
+
+  <main class="app">
+    <section class="card active" id="step1">
+      <div class="emoji-big floating">🥺</div>
+      <p class="eyebrow">WAIT... 💗</p>
+      <h1>Eits... Jangan pergi dulu</h1>
+      <p class="subtitle">Aku punya sesuatu yang mau aku sampaikan...</p>
+      <div class="love-character">🐻‍❣️</div>
+      <p class="message">
+        Aku tahu aku salah...<br>
+        Aku mungkin bikin kamu kesel, kecewa, atau bad mood.<br>
+        Tapi aku benar-benar minta maaf.<br>
+        Aku nggak mau gengsi.
+      </p>
+      <p class="question">Maukah kamu memaafkan aku? 🥺👉👈</p>
+      <div class="buttons">
+        <button class="btn primary" id="yesBtn">💗 IYA, AKU MAAFKAN</button>
+        <button class="btn secondary" id="noBtn">😤 NGGAK</button>
+      </div>
+      <p class="tiny" id="noMessage"></p>
+    </section>
+
+    <section class="card hidden" id="step2">
+      <div class="emoji-big">🥹💗</div>
+      <p class="eyebrow">YEEAY!</p>
+      <h1>MAKASIH UDAH MAAFIN AKU ❤️</h1>
+      <p class="message">
+        Aku janji bakal berusaha jadi lebih baik.<br>
+        Aku mungkin nggak sempurna,<br>
+        tapi aku serius nggak mau bikin kamu kecewa lagi.
+      </p>
+      <p class="subtitle">Dan karena kamu udah mau maafin aku...</p>
+      <button class="btn surprise" id="surpriseBtn">🎁 BUKA KEJUTANNYA</button>
+    </section>
+
+    <section class="card hidden" id="step3">
+      <div class="gift">🎁</div>
+      <p class="eyebrow">OUR SPECIAL AGENDA</p>
+      <h1>AGENDA KITA 💗</h1>
+
+      <div class="agenda">
+        <div><span>📅</span><strong>Kamis, 8 Oktober 2026</strong></div>
+        <div><span>⏰</span><strong>13:30 WIB</strong></div>
+        <div><span>🎮</span><strong>Main bareng & quality time</strong></div>
+        <div><span>📍</span><strong>Tempat: Tentukan bersama 💕</strong></div>
+      </div>
+
+      <p class="quote">“Yang penting bukan ke mana kita pergi...<br>tapi sama siapa kita menghabiskan waktu.” 🥺💗</p>
+
+      <div class="countdown-wrap">
+        <h2>💗 COUNTDOWN MENUJU WAKTU KITA 💗</h2>
+        <p id="countdownStatus" class="countdown-status">Menunggu waktu spesial...</p>
+        <div class="countdown" id="countdown">
+          <div><b id="days">00</b><span>Hari</span></div>
+          <div><b id="hours">00</b><span>Jam</span></div>
+          <div><b id="minutes">00</b><span>Menit</span></div>
+          <div><b id="seconds">00</b><span>Detik</span></div>
+        </div>
+      </div>
+
+      <button class="btn primary" id="readyBtn">💗 AKU SIAP!</button>
+    </section>
+
+    <section class="card hidden" id="step4">
+      <div class="emoji-big celebration">🎉🥹💗</div>
+      <p class="eyebrow">IT'S OUR TIME!</p>
+      <h1>WAKTUNYA TIBA!!!</h1>
+      <p class="message">
+        Akhirnya kita main bareng! 🎮✨<br><br>
+        Jangan lupa senyum, ketawa banyak-banyak,<br>
+        dan bikin cerita baru hari ini. 💕
+      </p>
+      <div class="date-badge">📅 8 OKTOBER 2026 · ⏰ 13:30 WIB</div>
+      <p class="quote">“Hari ini bukan sekadar agenda.<br>Hari ini adalah cerita baru kita. ❤️”</p>
+    </section>
+
+    <div class="secret hidden" id="secret">
+      💌 SECRET MESSAGE<br><br>
+      Aku sebenarnya nggak butuh alasan khusus buat bilang ini...<br>
+      <strong>Aku sayang kamu. ❤️</strong>
+    </div>
+  </main>
+
+  <footer>
+    <button id="resetBtn" class="reset">🔄 Mulai dari awal</button>
+  </footer>
+
+  <audio id="bgMusic" loop preload="none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

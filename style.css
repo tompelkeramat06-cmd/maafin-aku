@@ -1,0 +1,78 @@
+*{box-sizing:border-box}
+:root{
+  --pink:#ff6fa8;--pink2:#ff9fc5;--purple:#a78bfa;--text:#44243b;
+  --glass:rgba(255,255,255,.76);--shadow:0 25px 70px rgba(128,54,98,.18);
+}
+body.dark{--text:#ffeaf4;--glass:rgba(45,29,50,.86);background:#211827}
+body{
+  margin:0;min-height:100vh;font-family:"Quicksand",sans-serif;color:var(--text);
+  background:linear-gradient(135deg,#fff0f7,#f2eaff 48%,#fff5fa);
+  overflow-x:hidden;transition:.35s;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 15% 20%,rgba(255,255,255,.9),transparent 28%),
+             radial-gradient(circle at 85% 80%,rgba(255,180,215,.35),transparent 30%);
+}
+.topbar{position:fixed;right:18px;top:18px;display:flex;gap:8px;z-index:20}
+.mini-btn,.reset{
+  border:0;border-radius:999px;padding:9px 14px;background:rgba(255,255,255,.72);
+  color:var(--text);font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(100,50,90,.1);
+}
+.app{width:min(720px,92%);margin:auto;padding:75px 0 55px;position:relative;z-index:2}
+.card{
+  background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.75);border-radius:32px;padding:38px 30px;
+  text-align:center;box-shadow:var(--shadow);animation:pop .55s ease;
+}
+.hidden{display:none!important}
+.eyebrow{letter-spacing:3px;font-weight:800;font-size:.75rem;color:#e45592;margin:5px 0 10px}
+h1{font-family:"Pacifico",cursive;font-size:clamp(2rem,6vw,3.5rem);line-height:1.15;margin:10px 0}
+h2{font-size:1rem;margin:0 0 14px}
+.subtitle{font-size:1.1rem;margin:8px 0 20px}
+.message{line-height:1.8;font-size:1rem}
+.question{font-size:1.35rem;font-weight:800;margin:28px 0 18px}
+.emoji-big{font-size:4.8rem}.love-character{font-size:5rem;margin:12px}
+.floating{animation:float 2.5s ease-in-out infinite}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  border:0;border-radius:18px;padding:14px 20px;font:700 1rem "Quicksand";cursor:pointer;
+  transition:.2s;min-height:52px;box-shadow:0 12px 24px rgba(120,50,100,.15)
+}
+.btn:hover{transform:translateY(-3px) scale(1.02)}
+.primary{color:white;background:linear-gradient(135deg,var(--pink),#e95a98)}
+.secondary{background:white;color:#7a526a}
+.surprise{background:linear-gradient(135deg,#a78bfa,#ff6fa8);color:#fff;margin-top:16px}
+.tiny{min-height:22px;font-weight:700;color:#e45592}
+.agenda{display:grid;gap:10px;margin:22px 0}
+.agenda div{
+  display:flex;gap:12px;align-items:center;text-align:left;padding:13px 15px;
+  background:rgba(255,255,255,.5);border-radius:15px
+}
+.agenda span{font-size:1.4rem}.agenda strong{font-size:.95rem}
+.quote{font-style:italic;line-height:1.7;font-weight:600}
+.countdown-wrap{margin:24px 0;padding:20px 14px;border-radius:24px;background:rgba(255,255,255,.48)}
+.countdown-status{font-weight:700;margin:0 0 15px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.countdown div{background:rgba(255,255,255,.82);padding:14px 5px;border-radius:17px}
+.countdown b{display:block;font-size:clamp(1.5rem,6vw,2.4rem);color:#e45592}
+.countdown span{font-size:.75rem;font-weight:700}
+.gift{font-size:5rem;animation:bounce 1.5s infinite}
+.date-badge{display:inline-block;padding:12px 16px;border-radius:999px;background:rgba(255,255,255,.7);font-weight:800}
+.secret{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:30;width:min(500px,88%);
+background:rgba(60,28,55,.95);color:white;padding:22px;border-radius:22px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.2);animation:pop .4s}
+footer{text-align:center;position:relative;z-index:3;padding-bottom:25px}.reset{font-size:.78rem}
+.bg-heart{position:fixed;bottom:-30px;pointer-events:none;animation:rise linear forwards;z-index:1}
+.confetti{position:fixed;top:-20px;z-index:50;pointer-events:none;font-size:1.5rem;animation:confettiFall 2.4s linear forwards}
+@keyframes pop{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes float{50%{transform:translateY(-12px) rotate(3deg)}}
+@keyframes bounce{50%{transform:translateY(-12px) rotate(3deg)}}
+@keyframes rise{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes confettiFall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+@media(max-width:520px){
+  .app{padding-top:78px}.card{padding:30px 18px;border-radius:26px}
+  .buttons{flex-direction:column}.btn{width:100%}
+  .countdown{gap:5px}.countdown div{padding:12px 2px}
+  .countdown b{font-size:1.45rem}.countdown span{font-size:.68rem}
+  .topbar{right:10px;top:10px}
+}
